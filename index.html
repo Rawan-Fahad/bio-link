@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="./css/all.min.css" />
+    
+    <title data-i18n="page_title">الشيخ عبدالقادر | الروابط</title>
+    <meta name="description" content="الصفحة الرسمية للشيخ عبدالقادر، داعية إسلامي يحاور النصارى" data-i18n-description="page_description" />
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            background: #f7f7f7;
+            color: #222;
+            text-align: center;
+            padding: 20px;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #444;
+            margin-bottom: 15px;
+        }
+        hr {
+            margin: 20px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            line-height: 2;
+        }
+        .lang-switcher {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 99;
+        }
+        #language-button {
+            background: none;
+            border: none;
+            font-size: 2em;
+            cursor: pointer;
+            /* تم تغيير اللون هنا */
+            color: #FFD700; 
+            transition: color 0.3s;
+        }
+        #language-button:hover {
+            /* تم تغيير لون التمرير هنا */
+            color: #DC143C; 
+        }
+        .social-links li a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2em;
+        }
+        .social-links i {
+            font-size: 1.5em;
+            color: #007bff;
+            transition: color 0.3s;
+        }
+        .social-links a:hover i {
+            color: #0056b3;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+        }
+        h1, h3 {
+            margin-bottom: 5px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-switcher">
+        <button id="language-button" title="Toggle Language">🌐</button>
+    </div>
+
+    <img src="myphoto.jpg" alt="صورة الشيخ عبدالقادر" data-i18n-alt="profile_picture_alt">
+
+    <h1 data-i18n="title">الشيخ عبدالقادر</h1>
+    <p data-i18n="subtitle">داعية إسلامي متخصص في حوار النصارى</p>
+    <p><b><span data-i18n="quote">﴿ ادْعُ إِلِى سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ ﴾</span></b></p>
+
+    <hr>
+
+    <h3 data-i18n="links_title">روابطي الرسمية</h3>
+    <ul class="social-links">
+        <li><a href="https://www.facebook.com/abdulkadir.cebir.2025" target="_blank" data-i18n="facebook_link"><i class="fa-brands fa-facebook"></i> <span>صفحتي على فيسبوك</span></a></li>
+        <li><a href="https://www.tiktok.com/@abdulkaderjaber2025" target="_blank" data-i18n="tiktok_link1"><i class="fa-brands fa-tiktok"></i> <span>تيك توك 1</span></a></li>
+        <li><a href="https://www.tiktok.com/@abdulkadergaber2022" target="_blank" data-i18n="tiktok_link2"><i class="fa-brands fa-tiktok"></i> <span>تيك توك 2</span></a></li>
+        <li><a href="https://t.me/abdulkader_jaber" target="_blank" data-i18n="telegram_link"><i class="fa-brands fa-telegram"></i> <span>قناة التليجرام</span></a></li>
+        <li><a href="https://www.youtube.com/@abdulkadergaber" target="_blank" data-i18n="youtube_link"><i class="fa-brands fa-youtube"></i> <span>قناتي على اليوتيوب</span></a></li>
+    </ul>
+
+    <hr>
+    <p data-i18n="copyright_text">© جميع الحقوق محفوظة - الشيخ عبدالقادر</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/i18next/dist/umd/i18next.min.js"></script>
+    <script>
+        function updateContent() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                el.innerHTML = i18next.t(key);
+            });
+            document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+                const key = el.getAttribute('data-i18n-alt');
+                el.alt = i18next.t(key);
+            });
+            document.querySelectorAll('[data-i18n-description]').forEach(el => {
+                const key = el.getAttribute('data-i18n-description');
+                el.content = i18next.t(key);
+            });
+            if (i18next.language === 'ar') {
+                document.documentElement.setAttribute('lang', 'ar');
+                document.documentElement.setAttribute('dir', 'rtl');
+            } else {
+                document.documentElement.setAttribute('lang', 'en');
+                document.documentElement.setAttribute('dir', 'ltr');
+            }
+        }
+        
+        const resources = {
+            ar: {
+                translation: {
+                    "page_title": "الشيخ عبدالقادر | الروابط",
+                    "page_description": "الصفحة الرسمية للشيخ عبدالقادر، داعية إسلامي يحاور النصارى",
+                    "profile_picture_alt": "صورة الشيخ عبدالقادر",
+                    "title": "الشيخ عبدالقادر",
+                    "subtitle": "داعية إسلامي متخصص في حوار النصارى",
+                    "quote": "﴿ ادْعُ إِلِى سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ ﴾",
+                    "links_title": "روابطي الرسمية",
+                    "facebook_link": "صفحتي على فيسبوك",
+                    "tiktok_link1": "تيك توك 1",
+                    "tiktok_link2": "تيك توك 2",
+                    "telegram_link": "قناة التليجرام",
+                    "youtube_link": "قناتي على اليوتيوب",
+                    "copyright_text": "© جميع الحقوق محفوظة - الشيخ عبدالقادر"
+                }
+            },
+            en: {
+                translation: {
+                    "page_title": "Shaykh Abdulkadir | Links",
+                    "page_description": "Official page of Shaykh Abdulkadir, an Islamic preacher who dialogues with Christians",
+                    "profile_picture_alt": "Shaykh Abdulkadir's photo",
+                    "title": "Shaykh Abdulkadir",
+                    "subtitle": "Islamic preacher specializing in dialogue with Christians",
+                    "quote": "﴿ Invite to the way of your Lord with wisdom and good counsel ﴾",
+                    "links_title": "My Official Links",
+                    "facebook_link": "My Facebook Page",
+                    "tiktok_link1": "TikTok 1",
+                    "tiktok_link2": "TikTok 2",
+                    "telegram_link": "Telegram Channel",
+                    "youtube_link": "My YouTube Channel",
+                    "copyright_text": "© All Rights Reserved - Shaykh Abdulkadir"
+                }
+            }
+        };
+
+        const availableLanguages = ['ar', 'en'];
+        const userLang = navigator.language.substring(0, 2);
+        const initialLang = availableLanguages.includes(userLang) ? userLang : 'ar';
+        const languageButton = document.getElementById('language-button');
+        
+        i18next.init({
+            lng: initialLang,
+            debug: false,
+            resources: resources
+        }).then(function(t) {
+            updateContent();
+        });
+
+        languageButton.addEventListener('click', () => {
+            const currentLang = i18next.language;
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            i18next.changeLanguage(newLang).then(() => {
+                updateContent();
+            });
+        });
+    </script>
+</body>
+</html>
