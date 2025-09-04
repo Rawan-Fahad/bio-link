@@ -4,107 +4,400 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     
     <title data-i18n="page_title">الشيخ عبدالقادر | الروابط</title>
     <meta name="description" content="الصفحة الرسمية للشيخ عبدالقادر، داعية إسلامي يحاور النصارى" data-i18n-description="page_description" />
     <style>
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #159895;
+            --accent-color: #ffd700;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --border-radius: 12px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Tahoma, sans-serif;
-            background: #f7f7f7;
-            color: #222;
+            font-family: 'Tajawal', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #f7f7f7 0%, #e8f0fe 100%);
+            color: #333;
             text-align: center;
             padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-        img {
-            width: 150px;
-            height: 150px;
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .header {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .profile-img {
+            width: 170px;
+            height: 170px;
             border-radius: 50%;
-            border: 3px solid #444;
+            border: 4px solid var(--primary-color);
+            margin: 0 auto 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.03);
+            border-color: var(--secondary-color);
+        }
+        
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .profile-img:hover img {
+            transform: scale(1.1);
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: var(--secondary-color);
+            font-size: 18px;
             margin-bottom: 15px;
+            font-weight: 500;
         }
-        hr {
+        
+        .quote {
+            background: rgba(21, 152, 149, 0.1);
+            padding: 12px 20px;
+            border-radius: 30px;
             margin: 20px 0;
+            display: inline-block;
+            color: var(--dark-color);
+            font-size: 18px;
+            font-weight: 500;
+            border: 1px solid rgba(21, 152, 149, 0.2);
         }
-        ul {
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            margin: 25px 0;
+            border: none;
+        }
+        
+        h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 22px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
+        h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 3px;
+            background: var(--secondary-color);
+            border-radius: 3px;
+            transform: translateX(-50%);
+        }
+        
+        .social-links {
             list-style: none;
             padding: 0;
-            line-height: 2;
+            margin: 0;
         }
+        
+        .social-links li {
+            margin-bottom: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px 20px;
+            background: var(--light-color);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: var(--transition);
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-links a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary-color);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow);
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        .social-links a:hover::before {
+            opacity: 1;
+        }
+        
+        .social-links a:hover i {
+            transform: scale(1.2);
+            color: var(--primary-color);
+        }
+        
+        .social-links i {
+            font-size: 24px;
+            color: var(--secondary-color);
+            transition: var(--transition);
+            width: 30px;
+            text-align: center;
+        }
+        
+        .social-links span {
+            flex: 1;
+            text-align: right;
+        }
+        
+        .copyright {
+            margin-top: 25px;
+            color: #777;
+            font-size: 14px;
+        }
+        
         .lang-switcher {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 20px;
+            left: 20px;
             z-index: 99;
         }
+        
         #language-button {
-            background: none;
-            border: none;
-            font-size: 2em;
+            background: var(--light-color);
+            border: 1px solid #ddd;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
             cursor: pointer;
-            /* تم تغيير اللون هنا */
-            color: #FFD700; 
-            transition: color 0.3s;
-        }
-        #language-button:hover {
-            /* تم تغيير لون التمرير هنا */
-            color: #DC143C; 
-        }
-        .social-links li a {
-            display: inline-flex;
+            color: var(--primary-color);
+            transition: var(--transition);
+            display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.2em;
+            justify-content: center;
+            box-shadow: var(--box-shadow);
         }
-        .social-links i {
-            font-size: 1.5em;
-            color: #007bff;
-            transition: color 0.3s;
+        
+        #language-button:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: rotate(15deg);
         }
-        .social-links a:hover i {
-            color: #0056b3;
-        }
-        p {
-            font-size: 14px;
-            color: #555;
-        }
-        h1, h3 {
-            margin-bottom: 5px;
-        }
-        a {
-            color: #007bff;
+        
+        .contact-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .contact-btn:hover {
+            background: transparent;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .profile-img {
+                width: 140px;
+                height: 140px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .subtitle {
+                font-size: 16px;
+            }
+            
+            .quote {
+                font-size: 16px;
+                padding: 10px 15px;
+            }
+            
+            .social-links a {
+                padding: 12px 15px;
+            }
+            
+            .lang-switcher {
+                top: 15px;
+                left: 15px;
+            }
+            
+            #language-button {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
-    <div class="lang-switcher">
-        <button id="language-button" title="Toggle Language">🌐</button>
+    <div class="loading">
+        <div class="loading-spinner"></div>
     </div>
 
-    <img src="myphoto.jpg" alt="صورة الشيخ عبدالقادر" data-i18n-alt="profile_picture_alt">
+    <div class="container fade-in">
+        <div class="lang-switcher">
+            <button id="language-button" title="Toggle Language">🌐</button>
+        </div>
 
-    <h1 data-i18n="title">الشيخ عبدالقادر</h1>
-    <p data-i18n="subtitle">داعية إسلامي متخصص في حوار النصارى</p>
-    <p><b><span data-i18n="quote">﴿ ادْعُ إِلِى سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ ﴾</span></b></p>
+        <div class="header">
+            <div class="profile-img">
+                <img src="myphoto.jpg" alt="صورة الشيخ عبدالقادر" data-i18n-alt="profile_picture_alt">
+            </div>
+            
+            <h1 data-i18n="title">الشيخ عبدالقادر</h1>
+            <p class="subtitle" data-i18n="subtitle">داعية إسلامي متخصص في حوار النصارى</p>
+            <p class="quote"><b><span data-i18n="quote">﴿ ادْعُ إِلِى سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ ﴾</span></b></p>
+        </div>
 
-    <hr>
+        <hr class="divider">
 
-    <h3 data-i18n="links_title">روابطي الرسمية</h3>
-    <ul class="social-links">
-        <li><a href="https://www.facebook.com/abdulkadir.cebir.2025" target="_blank" data-i18n="facebook_link"><i class="fa-brands fa-facebook"></i> <span>صفحتي على فيسبوك</span></a></li>
-        <li><a href="https://www.tiktok.com/@abdulkaderjaber2025" target="_blank" data-i18n="tiktok_link1"><i class="fa-brands fa-tiktok"></i> <span>تيك توك 1</span></a></li>
-        <li><a href="https://www.tiktok.com/@abdulkadergaber2022" target="_blank" data-i18n="tiktok_link2"><i class="fa-brands fa-tiktok"></i> <span>تيك توك 2</span></a></li>
-        <li><a href="https://t.me/abdulkader_jaber" target="_blank" data-i18n="telegram_link"><i class="fa-brands fa-telegram"></i> <span>قناة التليجرام</span></a></li>
-        <li><a href="https://www.youtube.com/@abdulkadergaber" target="_blank" data-i18n="youtube_link"><i class="fa-brands fa-youtube"></i> <span>قناتي على اليوتيوب</span></a></li>
-    </ul>
+        <h3 data-i18n="links_title">روابطي الرسمية</h3>
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/abdulkadir.cebir.2025" target="_blank" data-i18n="facebook_link"><i class="fa-brands fa-facebook"></i> <span>صفحتي على فيسبوك</span></a></li>
+            <li><a href="https://www.tiktok.com/@abdulkaderjaber2025" target="_blank" data-i18n="tiktok_link1"><i class="fa-brands fa-tiktok"></i> <span>تيك توك 1</span></a></li>
+            <li><a href="https://www.tiktok.com/@abdulkadergaber2022" target="_blank" data-i18n="tiktok_link2"><i class="fa-brands fa-tiktok"></i> <span>تيك توك 2</span></a></li>
+            <li><a href="https://t.me/abdulkader_jaber" target="_blank" data-i18n="telegram_link"><i class="fa-brands fa-telegram"></i> <span>قناة التليجرام</span></a></li>
+            <li><a href="https://www.youtube.com/@abdulkadergaber" target="_blank" data-i18n="youtube_link"><i class="fa-brands fa-youtube"></i> <span>قناتي على اليوتيوب</span></a></li>
+        </ul>
 
-    <hr>
-    <p data-i18n="copyright_text">© جميع الحقوق محفوظة - الشيخ عبدالقادر</p>
+        <a href="mailto:contact@example.com" class="contact-btn" data-i18n="contact_button">تواصل معي</a>
+
+        <hr class="divider">
+        
+        <p class="copyright" data-i18n="copyright_text">© جميع الحقوق محفوظة - الشيخ عبدالقادر</p>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/i18next/dist/umd/i18next.min.js"></script>
     <script>
+        // إخفاء شاشة التحميل بعد تحميل الصفحة
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.querySelector('.loading').style.opacity = '0';
+                setTimeout(function() {
+                    document.querySelector('.loading').style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
         function updateContent() {
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
@@ -121,9 +414,11 @@
             if (i18next.language === 'ar') {
                 document.documentElement.setAttribute('lang', 'ar');
                 document.documentElement.setAttribute('dir', 'rtl');
+                document.querySelector('.container').style.textAlign = 'right';
             } else {
                 document.documentElement.setAttribute('lang', 'en');
                 document.documentElement.setAttribute('dir', 'ltr');
+                document.querySelector('.container').style.textAlign = 'left';
             }
         }
         
@@ -142,6 +437,7 @@
                     "tiktok_link2": "تيك توك 2",
                     "telegram_link": "قناة التليجرام",
                     "youtube_link": "قناتي على اليوتيوب",
+                    "contact_button": "تواصل معي",
                     "copyright_text": "© جميع الحقوق محفوظة - الشيخ عبدالقادر"
                 }
             },
@@ -159,6 +455,7 @@
                     "tiktok_link2": "TikTok 2",
                     "telegram_link": "Telegram Channel",
                     "youtube_link": "My YouTube Channel",
+                    "contact_button": "Contact Me",
                     "copyright_text": "© All Rights Reserved - Shaykh Abdulkadir"
                 }
             }
