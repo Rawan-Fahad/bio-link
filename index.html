@@ -1,14 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشيخ عبدالقادر | الروابط</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <title data-i18n="page_title">الشيخ عبدالقادر | الروابط</title>
-    <meta name="description" content="الصفحة الرسمية للشيخ عبدالقادر، داعية إسلامي يحاور النصارى" data-i18n-description="page_description" />
     <style>
         :root {
             --primary-color: #1a5f7a;
@@ -251,26 +248,6 @@
             transform: rotate(15deg);
         }
         
-        .contact-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 30px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            border: 2px solid var(--primary-color);
-        }
-        
-        .contact-btn:hover {
-            background: transparent;
-            color: var(--primary-color);
-            transform: translateY(-3px);
-            box-shadow: var(--box-shadow);
-        }
-        
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -344,7 +321,7 @@
         
         @keyframes spin {
             0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            to { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -360,33 +337,30 @@
 
         <div class="header">
             <div class="profile-img">
-                <img src="myphoto.jpg" alt="صورة الشيخ عبدالقادر" data-i18n-alt="profile_picture_alt">
+                <img src="myphoto.jpg" alt="صورة الشيخ عبدالقادر">
             </div>
             
-            <h1 data-i18n="title">الشيخ عبدالقادر</h1>
-            <p class="subtitle" data-i18n="subtitle">داعية إسلامي متخصص في حوار النصارى</p>
-            <p class="quote"><b><span data-i18n="quote">﴿ ادْعُ إِلِى سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ ﴾</span></b></p>
+            <h1>الشيخ عبدالقادر</h1>
+            <p class="subtitle">داعية إسلامي متخصص في حوار النصارى</p>
+            <p class="quote"><b>﴿ ادْعُ إِلِى سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ ﴾</b></p>
         </div>
 
         <hr class="divider">
 
-        <h3 data-i18n="links_title">روابطي الرسمية</h3>
+        <h3>روابطي الرسمية</h3>
         <ul class="social-links">
-            <li><a href="https://www.facebook.com/abdulkadir.cebir.2025" target="_blank" data-i18n="facebook_link"><i class="fa-brands fa-facebook"></i> <span>صفحتي على فيسبوك</span></a></li>
-            <li><a href="https://www.tiktok.com/@abdulkaderjaber2025" target="_blank" data-i18n="tiktok_link1"><i class="fa-brands fa-tiktok"></i> <span>تيك توك 1</span></a></li>
-            <li><a href="https://www.tiktok.com/@abdulkadergaber2022" target="_blank" data-i18n="tiktok_link2"><i class="fa-brands fa-tiktok"></i> <span>تيك توك 2</span></a></li>
-            <li><a href="https://t.me/abdulkader_jaber" target="_blank" data-i18n="telegram_link"><i class="fa-brands fa-telegram"></i> <span>قناة التليجرام</span></a></li>
-            <li><a href="https://www.youtube.com/@abdulkadergaber" target="_blank" data-i18n="youtube_link"><i class="fa-brands fa-youtube"></i> <span>قناتي على اليوتيوب</span></a></li>
+            <li><a href="https://www.facebook.com/abdulkadir.cebir.2025" target="_blank"><i class="fa-brands fa-facebook"></i> <span>صفحتي على فيسبوك</span></a></li>
+            <li><a href="https://www.tiktok.com/@abdulkaderjaber2025" target="_blank"><i class="fa-brands fa-tiktok"></i> <span>تيك توك 1</span></a></li>
+            <li><a href="https://www.tiktok.com/@abdulkadergaber2022" target="_blank"><i class="fa-brands fa-tiktok"></i> <span>تيك توك 2</span></a></li>
+            <li><a href="https://t.me/abdulkader_jaber" target="_blank"><i class="fa-brands fa-telegram"></i> <span>قناة التليجرام</span></a></li>
+            <li><a href="https://www.youtube.com/@abdulkadergaber" target="_blank"><i class="fa-brands fa-youtube"></i> <span>قناتي على اليوتيوب</span></a></li>
         </ul>
-
-        <a href="mailto:contact@example.com" class="contact-btn" data-i18n="contact_button">تواصل معي</a>
 
         <hr class="divider">
         
-        <p class="copyright" data-i18n="copyright_text">© جميع الحقوق محفوظة - الشيخ عبدالقادر</p>
+        <p class="copyright">© جميع الحقوق محفوظة - الشيخ عبدالقادر</p>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/i18next/dist/umd/i18next.min.js"></script>
     <script>
         // إخفاء شاشة التحميل بعد تحميل الصفحة
         window.addEventListener('load', function() {
@@ -398,88 +372,9 @@
             }, 1000);
         });
 
-        function updateContent() {
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                el.innerHTML = i18next.t(key);
-            });
-            document.querySelectorAll('[data-i18n-alt]').forEach(el => {
-                const key = el.getAttribute('data-i18n-alt');
-                el.alt = i18next.t(key);
-            });
-            document.querySelectorAll('[data-i18n-description]').forEach(el => {
-                const key = el.getAttribute('data-i18n-description');
-                el.content = i18next.t(key);
-            });
-            if (i18next.language === 'ar') {
-                document.documentElement.setAttribute('lang', 'ar');
-                document.documentElement.setAttribute('dir', 'rtl');
-                document.querySelector('.container').style.textAlign = 'right';
-            } else {
-                document.documentElement.setAttribute('lang', 'en');
-                document.documentElement.setAttribute('dir', 'ltr');
-                document.querySelector('.container').style.textAlign = 'left';
-            }
-        }
-        
-        const resources = {
-            ar: {
-                translation: {
-                    "page_title": "الشيخ عبدالقادر | الروابط",
-                    "page_description": "الصفحة الرسمية للشيخ عبدالقادر، داعية إسلامي يحاور النصارى",
-                    "profile_picture_alt": "صورة الشيخ عبدالقادر",
-                    "title": "الشيخ عبدالقادر",
-                    "subtitle": "داعية إسلامي متخصص في حوار النصارى",
-                    "quote": "﴿ ادْعُ إِلِى سَبِيلِ رَبِّكَ بِالْحِكْمَةِ وَالْمَوْعِظَةِ الْحَسَنَةِ ﴾",
-                    "links_title": "روابطي الرسمية",
-                    "facebook_link": "صفحتي على فيسبوك",
-                    "tiktok_link1": "تيك توك 1",
-                    "tiktok_link2": "تيك توك 2",
-                    "telegram_link": "قناة التليجرام",
-                    "youtube_link": "قناتي على اليوتيوب",
-                    "contact_button": "تواصل معي",
-                    "copyright_text": "© جميع الحقوق محفوظة - الشيخ عبدالقادر"
-                }
-            },
-            en: {
-                translation: {
-                    "page_title": "Shaykh Abdulkadir | Links",
-                    "page_description": "Official page of Shaykh Abdulkadir, an Islamic preacher who dialogues with Christians",
-                    "profile_picture_alt": "Shaykh Abdulkadir's photo",
-                    "title": "Shaykh Abdulkadir",
-                    "subtitle": "Islamic preacher specializing in dialogue with Christians",
-                    "quote": "﴿ Invite to the way of your Lord with wisdom and good counsel ﴾",
-                    "links_title": "My Official Links",
-                    "facebook_link": "My Facebook Page",
-                    "tiktok_link1": "TikTok 1",
-                    "tiktok_link2": "TikTok 2",
-                    "telegram_link": "Telegram Channel",
-                    "youtube_link": "My YouTube Channel",
-                    "contact_button": "Contact Me",
-                    "copyright_text": "© All Rights Reserved - Shaykh Abdulkadir"
-                }
-            }
-        };
-
-        const availableLanguages = ['ar', 'en'];
-        const userLang = navigator.language.substring(0, 2);
-        const initialLang = availableLanguages.includes(userLang) ? userLang : 'ar';
-        const languageButton = document.getElementById('language-button');
-        
-        i18next.init({
-            lng: initialLang,
-            debug: false,
-            resources: resources
-        }).then(function(t) {
-            updateContent();
-        });
-
-        languageButton.addEventListener('click', () => {
-            const currentLang = i18next.language;
-            const newLang = currentLang === 'ar' ? 'en' : 'ar';
-            i18next.changeLanguage(newLang).then(() => {
-                updateContent();
-            });
+        // تبديل اللغة
+        document.getElementById('language-button').addEventListener('click', function() {
+            alert('ميزة الترجمة متعددة اللغات تحتاج إلى إعداد إضافي. يمكنك إضافتها لاحقًا إذا رغبت.');
         });
     </script>
 </body>
